@@ -6,33 +6,43 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1.6;
 }
 
 header, footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #007f4f;
     color: white;
 }
 
-#portfolio {
+#about, #portfolio, #contact {
     max-width: 900px;
     margin: 20px;
+    text-align: center;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
-    justify-content: center;
 }
 
-.gallery img {
+.slide {
+    text-align: center;
+}
+
+.slide img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    padding: 20px;
+    width: 100%;
 }
